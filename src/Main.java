@@ -1,11 +1,14 @@
 import java.util.HashMap;
+import java.util.Scanner;
 import java.util.function.Function;
 
 public class Main {
     public static void main(String[] args) {
-        var n = 100_000_000;
+        // var n = 100_000_000;
 
-        ////////
+        average();
+
+        /*
         var total_time = 0f;
         for (int i =0; i < n; i++) {
             total_time += timeFunction(Main::isAnagram, new Pair<>("desperation", "a rope ends it"));
@@ -17,8 +20,19 @@ public class Main {
             total_time += timeFunction(Main::isAnagram2, new Pair<>("desperation", "a rope ends it"));
         }
         System.out.printf("Average time taken for isAnagram2: %fms\n", total_time / n);
+        */
     }
 
+    /**
+     * Method that takes in a {@link Function } f and a parameter t, with which the function is called.
+     * It then returns the time it has taken to execute said function.
+     * @author Linus Ziegler
+     *
+     * @param f Method to be timed
+     * @param t Parameter with which f is called
+     * @return Time it has taken to execute the function in ms
+     * @since 0.0.1
+    */
     public static <T, R> float timeFunction(Function<T, R> f, T t) {
         long start = System.nanoTime();
         f.apply(t);
@@ -27,7 +41,7 @@ public class Main {
         return (float) (end - start) / 1_000_000f;
     }
 
-    public static boolean isAnagram(Pair<String, String> pair) { return isAnagram(pair.first, pair.second); }
+    public static boolean isAnagram(Tuples.Pair<String, String> pair) { return isAnagram(pair.first, pair.second); }
 
     public static boolean isAnagram(String s1, String s2) {
         s1 = s1.replaceAll("\\s", "").toLowerCase();
@@ -38,7 +52,7 @@ public class Main {
         var n = s1.length();
 
         for (int i = 0; i < n; i++) {
-            var c1 = s1.charAt(i);
+            var c1 = s1.charAt(i); // d
             var contains_char = false;
 
             for (int k = 0; k < n; k++) {
@@ -54,7 +68,7 @@ public class Main {
         return true;
     }
 
-    public static boolean isAnagram2(Pair<String, String> pair) {
+    public static boolean isAnagram2(Tuples.Pair<String, String> pair) {
         return isAnagram2(pair.first, pair.second);
     }
     public static boolean isAnagram2(String s1, String s2) {
@@ -76,6 +90,67 @@ public class Main {
         return char_map_s1.equals(char_map_s2);
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public static void average() {
+        // Scanner für user input
+        // System.in anstatt System.out (input stream, nicht output stream)
+        Scanner scanner = new Scanner(System.in);
+
+        // input lesen
+        var input = scanner.nextLine();
+
+        // array initialisieren
+        // 'new' operator allocated den nötigen speicher
+        int length = 2;
+        int[] array = new int[length];
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
 
