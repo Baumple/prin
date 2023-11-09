@@ -1,12 +1,13 @@
+import tuples.Pair;
+
 import java.util.HashMap;
 import java.util.Scanner;
 import java.util.function.Function;
 
 public class Main {
     public static void main(String[] args) {
-        // var n = 100_000_000;
 
-        average();
+      //  average();
 
         /*
         var total_time = 0f;
@@ -41,7 +42,7 @@ public class Main {
         return (float) (end - start) / 1_000_000f;
     }
 
-    public static boolean isAnagram(Tuples.Pair<String, String> pair) { return isAnagram(pair.first, pair.second); }
+    public static boolean isAnagram(Pair<String, String> pair) { return isAnagram(pair.first, pair.second); }
 
     public static boolean isAnagram(String s1, String s2) {
         s1 = s1.replaceAll("\\s", "").toLowerCase();
@@ -68,10 +69,10 @@ public class Main {
         return true;
     }
 
-    public static boolean isAnagram2(Tuples.Pair<String, String> pair) {
-        return isAnagram2(pair.first, pair.second);
+    public static boolean isAnagramHashMap(Pair<String, String> pair) {
+        return isAnagramHashMap(pair.first, pair.second);
     }
-    public static boolean isAnagram2(String s1, String s2) {
+    public static boolean isAnagramHashMap(String s1, String s2) {
         s1 = s1.replaceAll("\\s", "").toLowerCase();
         s2 = s2.replaceAll("\\s", "").toLowerCase();
 
@@ -92,8 +93,26 @@ public class Main {
     }
 
 
+    public static boolean isAnagramArray(String s1, String s2) {
 
+        if (s1.length() != s2.length()) {
+            return false;
+        }
 
+        char char_range = 256;
+        var chars = new char[char_range];
+
+        for (int i = 0; i < s1.length(); i++) {
+            chars[s1.charAt(i)]++;
+            chars[s2.charAt(i)]--;
+        }
+
+        for (char c : chars) if (c != 0) return false;
+
+        return true;
+    }
+
+    public static boolean isAnagramArray(Pair<String, String> pair) { return isAnagramArray(pair.first, pair.second); }
 
 
 
