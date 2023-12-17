@@ -1,11 +1,12 @@
 package calendar;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 
 @SuppressWarnings("unused")
 public class AppointmentCalendar {
-
     final private ArrayList<Appointment> appointments = new ArrayList<>();
 
     /**
@@ -31,11 +32,8 @@ public class AppointmentCalendar {
      * @return boolean true if an appointment was found and false if it no appointment was found
      */
     public boolean isAppointmentAtDate(Date date) {
-        return this.appointments.stream().anyMatch((appointment) -> appointment.getDate().equals(date));
-    }
-
-    public boolean isAppointmentAtDate(String date) {
-        return isAppointmentAtDate(new Date(date));
+        List<Appointment> sameDate = this.appointments.stream().filter(p -> p.getDate().isSameDate(date)).toList();
+        return false;
     }
 
     public int getAppointmentCount() {

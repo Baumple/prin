@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c05a9928-0e3e-4d93-b5be-8c054bafc9f3" name="Changes" comment="Yes">
-      <change afterPath="$PROJECT_DIR$/src/loops/Loops.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/euclidean/EuclideanAlgorithm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/calendar/Appointment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/calendar/Appointment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/calendar/AppointmentCalendar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/calendar/AppointmentCalendar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/calendar/Date.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/calendar/Date.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/circle/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/circle/Circle.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +112,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700063493440</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Yes">
+      <option name="closed" value="true" />
+      <created>1700212817857</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1700212817857</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -122,6 +135,11 @@
           <properties class="java.lang.StringIndexOutOfBoundsException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/euclidean/EuclideanAlgorithm.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

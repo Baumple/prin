@@ -1,24 +1,31 @@
 package calendar;
 
+import jdk.jshell.spi.ExecutionControl;
+
+import static jdk.jshell.spi.ExecutionControl.*;
+
 @SuppressWarnings("unused")
 public class Appointment {
-    private Date date;
+    private final Date dateStart;
+    private final Date dateEnd;
 
-    private String description;
+    private final String description;
 
     public Appointment(Date date, String description) {
-        this.date = date;
+        this.dateStart = date;
+        this.dateEnd = date;
         this.description = description;
     }
 
-    public Appointment(String date, String description) throws IllegalArgumentException {
-        this.date = new Date(date);
+    public Appointment(Date dateStart, Date dateEnd, String description) throws IllegalArgumentException {
+        this.dateStart = dateStart;
+        this.dateEnd = dateEnd;
         this.description = description;
     }
 
     // Aufgabe sagt void?
     public Date getDate() {
-        return date;
+        return dateStart;
     }
 
     public String getDescription() {
@@ -27,6 +34,17 @@ public class Appointment {
 
     @Override
     public String toString() {
-        return String.format("%s: %s", this.date.toString(), this.description);
+        System.err.println("not implemented");
+        System.exit(1);
+        return String.format("%s: %s", this.dateStart.toString(), this.description);
     }
+
+    // TODO: Check if a given appointment is within a time span.
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Appointment appointment) {
+        }
+        return false;
+    }
+
 }
